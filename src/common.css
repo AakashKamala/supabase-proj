@@ -1,0 +1,117 @@
+/* Common CSS for both Trader and Owner components */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .container {
+    max-width: 600px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    position: relative;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #000;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  input[type="email"], input[type="password"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  input[type="email"]:hover, input[type="password"]:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  input[type="email"]:focus, input[type="password"]:focus {
+    outline: none;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+  }
+  
+  button {
+    padding: 10px 15px;
+    background-color: #000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  button:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+  }
+  
+  p {
+    text-align: center;
+  }
+  
+  p.error {
+    color: red;
+  }
+  
+  p.success {
+    color: green;
+  }
+  
+  /* Animated background logos */
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+  
+  .logo {
+    position: absolute;
+    font-size: 50px;
+    color: rgba(0, 0, 0, 0.1);
+    animation: float 5s ease-in-out infinite;
+  }
+  
+  .logo:nth-child(odd) {
+    animation-duration: 6s;
+  }
+  
+  .logo:nth-child(even) {
+    animation-duration: 4s;
+  }
+  
+  .background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+  }
+  
