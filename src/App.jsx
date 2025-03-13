@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Trader from './Trader'
 import Owner from './Owner'
-import "./app.css"
+import "./App.css"
 
 const App = () => {
   const [page, setPage]=useState("trader")
